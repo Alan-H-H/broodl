@@ -2,7 +2,7 @@ import { Fugaz_One, Open_Sans } from 'next/font/google'
 import "./globals.css";
 import Link from 'next/link';
 import { AuthProvider } from '@/context/AuthContext';
-import Header from './Head';
+import Head from './header.js';
 import Logout from '@/components/Logout';
 
 const fugaz = Fugaz_One ({ subsets: ['latin'], weight: ['400']})
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   )
   return (
     <html lang="en">
-      <Header />
+      <Head />
       <AuthProvider>
       <body
         className={'w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-600' +
