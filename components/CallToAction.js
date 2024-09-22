@@ -11,19 +11,19 @@ export default function CallToAction() {
     if(currentUser){
         return(
             <div className='max-width-[600px] mx-auto w-full'>
-                <Link href={"/dashboard"}>
-                  <Button dark full text="Go to Dashboard" />
+                <Link href={'/dashboard'}>
+                  <Button dark full text='Go to Dashboard' />
                 </Link>
             </div>
         )
     }
   return (
             <div className='grid grid-cols-2 gap-4 w-fit mx-auto'>
-                <Link href={"/dashboard"}>
-                  <Button text="Sign Up" />
+                <Link href={'/dashboard'}>
+                  <Button text='Sign Up' />
                 </Link>
-                <Link href={"/dashboard"}>
-                  <Button text="Login" dark />
+                <Link href={'/dashboard'}>
+                  <Button text='Login' dark />
                 </Link>
             </div>
   )

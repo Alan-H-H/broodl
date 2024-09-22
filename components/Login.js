@@ -22,7 +22,7 @@ export default function Login() {
       setError('Password mus have at least 6 characters')
     }
     if(!email || !password) {
-      setError("Can't be empty")
+      setError('Cant be empty')
     }
     setAuthenticating(true)
     try{
@@ -70,16 +70,16 @@ export default function Login() {
         className='max-w-[400px] w-full mx-auto px-3 py-2 sm:py-3 border border-solid border-indigo-200 rounded-full duration-200 outline-none hover:border-indigo-400 focus:border-indigo-600'
         placeholder='Password' type='password' />
         <div className='max-w-[400px] w-full mx-auto'>
-          <Button clickHandler={handleSubmit} text={ authenticating ? "Submiting" : "Submit" } full/>
+          <Button clickHandler={handleSubmit} text={ authenticating ? 'Submiting' : 'Submit' } full/>
           {error ? error : ' '}
         </div>
-        <p>{isRegister ? "Already have an account" : "Don't have an account?" }
+        <p>{isRegister ? 'Already have an account' : 'Dont have an account?' }
           <button onClick={() => setIsRegister(!isRegister)} className='text-indigo-600'>
             {isRegister ? 'Sign in' : 'Sign up'}</button></p>
             {!isRegister && (
         <p>
           Forgot your password?
-          <button onClick={handlePasswordReset} className="text-indigo-600">
+          <button onClick={handlePasswordReset} className='text-indigo-600'>
             Reset Password
           </button>
         </p>

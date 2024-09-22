@@ -21,7 +21,6 @@ export default function Calendar(props) {
 
   const numericMonth = monthsArr.indexOf(selectedMonth)
   const data = completeData?.[selectedYear]?.[numericMonth] || {}
-  console.log(completeData)
 
   function handleIncrementMonth(val){
     //value +1 =1
@@ -50,10 +49,10 @@ export default function Calendar(props) {
     <div className='flex flex-col gap-2'>
       <div className='grid grid-cols-5 gap-4'>
         <button onClick={()=>{handleIncrementMonth(-1)}}
-        className='mr-auto text-indigo-400 text-lg sm:text-xl duration-200 hover:opacity-60'><i className="fa-solid fa-hand-point-left"></i></button>
+        className='mr-auto text-indigo-400 text-lg sm:text-xl duration-200 hover:opacity-60'><i className='fa-solid fa-hand-point-left'></i></button>
         <p className={'text-center col-span-3 capitalized withespace-nowrap textGradient ' + fugaz.className}>{selectedMonth}, {selectedYear}</p>
         <button onClick={()=>{handleIncrementMonth(-1)}}
-        className='ml-auto text-indigo-400 text-lg sm:text-xl hover:opacity-60'><i className="fa-solid fa-hand-point-right"></i></button>
+        className='ml-auto text-indigo-400 text-lg sm:text-xl hover:opacity-60'><i className='fa-solid fa-hand-point-right'></i></button>
       </div>
     <div className='flex flex-col overflow-hidden gap-1 p-3 py-4 sm:py-6 md:py-10'>
       {[...Array(numRows).keys()].map((row, rowIndex)=>{

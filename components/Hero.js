@@ -1,8 +1,6 @@
 import React from 'react'
 import { Fugaz_One } from 'next/font/google'
-import Button from './Button'
 import Calendar from './Calendar'
-import Link from 'next/link'
 import CallToAction from './CallToAction'
 
 const fugaz = Fugaz_One ({ subsets: ['latin'], weight: ['400']})
